@@ -57,5 +57,11 @@ public class Hospital {
     public int obtenerNumeroEnfermeros(){
         return numeroEnfermeros;
     }
-    
+    @Override
+    public String toString() {
+        String cadena = String.format("\nNombre: %s\nCiudad: %s\nNumero de "
+                + "doctores: %d\nNumero de enfermeros: %d\n", obtenerNombre(),
+                obtenerCiudad(), obtenerNumeroDoctores(), obtenerNumeroEnfermeros());
+        return cadena;
+        }
 }

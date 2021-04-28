@@ -1,31 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package paquete2;
 
-/**
- *
- * @author reroes
- */
+import java.util.Scanner;
+
 public class Ejecutor {
 
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
         /*Crear un objeto y presentar los datos
         Ingresar la información por teclado.
          */
-        String nombre = "Isidro Ayora";
-        String ciudad = "Loja";
-        int numeroDoctores = 100;
-        int numeroEnfermeros = 200;
+        String nombre;
+        String ciudad;
+        int numeroDoctores;
+        int numeroEnfermeros;
+
+        System.out.print("Ingrese el nombre del hospital: ");
+        nombre = sc.nextLine();
+        System.out.print("Ingrese el nombre de la cuidad: ");
+        ciudad = sc.nextLine();
+        System.out.print("Ingrese el numero de doctores: ");
+        numeroDoctores = sc.nextInt();
+         System.out.print("Ingrese el numero de enfermeros: ");
+        numeroEnfermeros = sc.nextInt();
+
         Hospital h2 = new Hospital(nombre, ciudad, numeroDoctores, numeroEnfermeros);
-        System.out.print("Los datos son\n");
-        System.out.printf("Nombre:%s\n" + "Cuidad%s\n"
-                + "Numero de doctores%d\n" + "Numero de enfermos%d\n",
-                h2.obtenerNombre(), h2.obtenerCiudad(),
-                h2.obtenerNumeroDoctores(), h2.obtenerNumeroEnfermeros());
+        h2.establecerNombre(nombre);
+        h2.establecerCiudad(ciudad);
+        h2.establecerNumeroDoctores(numeroDoctores);
+        h2.establecerNumeroEnfermeros(numeroEnfermeros);
+        System.out.printf("%s\n", h2);
 
     }
 }
