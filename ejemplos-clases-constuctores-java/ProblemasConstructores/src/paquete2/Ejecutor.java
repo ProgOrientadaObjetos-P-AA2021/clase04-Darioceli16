@@ -29,7 +29,8 @@ public class Ejecutor {
         h2.establecerCiudad(ciudad);
         h2.establecerNumeroDoctores(numeroDoctores);
         h2.establecerNumeroEnfermeros(numeroEnfermeros);
+        
         System.out.printf("%s\n", h2);
 
-    }
+       }
 }
